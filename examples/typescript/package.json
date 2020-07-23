@@ -49,11 +49,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "yarn test:e2e:ci",
+    "test": "yarn clean && yarn build && yarn test:e2e:ci",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
+    "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cy:run"
   },
   "eslintIgnore": [
     "*.js"
